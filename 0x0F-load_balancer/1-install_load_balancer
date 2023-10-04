@@ -1,10 +1,7 @@
-<<<<<<< HEAD
+
 installs HAProxy version 1.8 with the following configurations:
-=======
-nstalls HAProxy version 1.8 with the following configurations:
->>>>>>> afa0d92f6d8e226652cd78df7b920a24e23abe2f
-#+    Enables management via the init script.
-#+    Distributes requests using a round-robin algorithm.
+#    Enables management via the init script.
+#    Distributes requests using a round-robin algorithm.
 
 apt-get install -y software-properties-common
 add-apt-repository -y ppa:vbernat/haproxy 
@@ -40,13 +37,8 @@ listen hbnb
     balance roundrobin
     option httpclose
     option forwardfor
-<<<<<<< HEAD
     server 301366-web-01 100.26.161.242:80 check
     server 301366-web-02 100.25.167.170:80 check
-=======
-    server 84912-web-01 18.235.233.101:80 check
-    server 84912-web-02 54.160.82.163:80 check
->>>>>>> afa0d92f6d8e226652cd78df7b920a24e23abe2f
 " >> /etc/haproxy/haproxy.cfg
 
 service haproxy start
